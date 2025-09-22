@@ -25,7 +25,7 @@ log_error() {
 # Переменные
 PROJECT_PATH=${NEXTJS_PROJECT_PATH:-"/var/www/dobrenok-landing"}
 DOCKER_COMPOSE_FILE="docker-compose.prod.yml"
-IMAGE_NAME=${IMAGE_NAME:-"ghcr.io/mrstery/dobrenok-landing:latest"}
+IMAGE_NAME=${IMAGE_NAME:-"ghcr.io/mrsterdy/dobrenok-landing:latest"}
 BACKUP_DIR="${PROJECT_PATH}/backups"
 
 # Создание директории для бэкапов
