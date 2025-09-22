@@ -24,7 +24,7 @@ RUN --mount=type=secret,id=env_production \
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN npm install -g bun && bun run build
+RUN npm install -g bun && bun run --env-file=.env.production build
 
 FROM base AS runner
 
