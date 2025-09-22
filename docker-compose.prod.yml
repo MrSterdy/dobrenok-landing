@@ -11,7 +11,7 @@ services:
     env_file:
       - .env.production
     networks:
-      - dobrenok_network  # Используем сеть Laravel проекта
+      - dobrenok-blog_dobrenok_network  # Используем сеть Laravel проекта
 
 networks:
   dobrenok-blog_dobrenok_network:
