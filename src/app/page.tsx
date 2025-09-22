@@ -6,6 +6,8 @@ import { EventsSection } from "@/app/components/EventsSection";
 import { NewsSection } from "@/app/components/NewsSection";
 import { PartnersSection } from "@/app/components/PartnersSection";
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
   return (
     <article className="flex flex-col flex-grow">
