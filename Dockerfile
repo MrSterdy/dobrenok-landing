@@ -41,8 +41,6 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-RUN npm install -g bun
-
 USER nextjs
 
 EXPOSE 3000
@@ -50,4 +48,4 @@ EXPOSE 3000
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
 
-CMD ["bun", "server.js"]
+CMD ["node", "server.js"]
