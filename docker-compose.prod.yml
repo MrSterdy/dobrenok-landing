@@ -1,6 +1,6 @@
 services:
   nextjs:
-    image: ghcr.io/mrstery/dobrenok-nextjs:latest
+    image: ghcr.io/mrstery/dobrenok-landing:latest
     container_name: dobrenok_nextjs_prod
     restart: unless-stopped
     environment:
