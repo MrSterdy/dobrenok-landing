@@ -14,5 +14,5 @@ services:
       - dobrenok_network  # Используем сеть Laravel проекта
 
 networks:
-  dobrenok_network:
+  dobrenok-blog_dobrenok_network:
     external: true  # Подключаемся к существующей сети Laravel
