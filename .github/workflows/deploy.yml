@@ -64,12 +64,15 @@ jobs:
 
     - name: Deploy to server
       uses: appleboy/ssh-action@v1.2.2
+      env:
+        IMAGE_NAME: ghcr.io/mrsterdy/dobrenok-landing:latest
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script_stop: true
+        envs: IMAGE_NAME
         script: |
           # Переход в директорию NextJS проекта
           cd ${{ secrets.NEXTJS_PROJECT_PATH }}
@@ -84,7 +87,7 @@ jobs:
           echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
           # Загрузка нового образа
-          docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          docker pull $IMAGE_NAME
 
           # Запуск контейнеров с новым образом
           docker-compose -f docker-compose.prod.yml up -d
