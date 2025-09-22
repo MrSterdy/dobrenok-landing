@@ -3,35 +3,16 @@ services:
     image: ghcr.io/mrsterdy/dobrenok-landing:latest
     container_name: dobrenok_nextjs_prod
     restart: unless-stopped
+    ports:
+      - "3000:3000"  # Открываем порт для доступа из Laravel Nginx
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
     env_file:
       - .env.production
     networks:
-      - dobrenok_nextjs_network
-
-  nginx:
-    image: nginx:alpine
-    container_name: dobrenok_nextjs_nginx_prod
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./docker/nginx/nginx.prod.conf:/etc/nginx/nginx.conf:ro
-      - ./docker/nginx/ssl:/etc/nginx/ssl:ro
-      - ./docker/nginx/logs:/var/log/nginx
-    depends_on:
-      - nextjs
-    networks:
-      - dobrenok_nextjs_network
-    healthcheck:
-      test: ["CMD", "nginx", "-t"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+      - dobrenok_network  # Используем сеть Laravel проекта
 
 networks:
-  dobrenok_nextjs_network:
-    driver: bridge
+  dobrenok_network:
+    external: true  # Подключаемся к существующей сети Laravel
