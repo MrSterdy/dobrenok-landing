@@ -17,6 +17,11 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+RUN --mount=type=secret,id=env_production \
+    if [ -f /run/secrets/env_production ]; then \
+        cp /run/secrets/env_production .env.production; \
+    fi
+
 ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm install -g bun && bun run build
