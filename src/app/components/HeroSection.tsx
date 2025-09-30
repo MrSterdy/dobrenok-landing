@@ -18,10 +18,8 @@ export function HeroSection() {
     const paymentForm = useForm({
         resolver: zodResolver(MakePaymentSchema),
         defaultValues: {
-            amount: 0,
-            monthly: false,
-            email: '',
-            name: '',
+            amount: 10,
+            monthly: true,
         },
     })
 
@@ -215,7 +213,7 @@ export function HeroSection() {
                                             <FormItem>
                                                 <FormLabel>Email {!paymentForm.watch('monthly') && '(необязательно)'}</FormLabel>
                                                 <FormControl>
-                                                    <Input {...field} type="email" className="shadow-none" placeholder="your@email.com" />
+                                                    <Input {...field} className="shadow-none" placeholder="your@email.com" />
                                                 </FormControl>
                                                 <FormMessage />
                                             </FormItem>
