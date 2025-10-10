@@ -12,11 +12,11 @@ export default function Header() {
             </Link>
             <nav className="hidden lg:flex lg:gap-8">
                 <Link href="/">Главная</Link>
-                <Link href="/#about-us">Кто мы</Link>
-                <Link href="/#projects">Что делаем</Link>
-                <Link href="/#events">Мероприятия</Link>
-                <Link href="/#news">Новости</Link>
-                <Link href="/#contacts">Контакты</Link>
+                <a href="https://dobrenok-fond.ru/o-fonde">Кто мы</a>
+                <a href="https://dobrenok-fond.ru/proekty/">Что делаем</a>
+                <a href="https://dobrenok-fond.ru/meropriyatiya/">Мероприятия</a>
+                <a href="https://dobrenok-fond.ru/novosti/">Новости</a>
+                <a href="https://dobrenok-fond.ru/kontakty">Контакты</a>
             </nav>
             <div className="flex items-center gap-2">
                 <Button size="lg" variant="green" className="hidden sm:block cursor-pointer shadow-none mx-4">
