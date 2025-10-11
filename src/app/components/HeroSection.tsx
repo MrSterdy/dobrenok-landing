@@ -62,7 +62,6 @@ export function HeroSection() {
                 const response = await createProjectSubscription(subscriptionData);
 
                 if (response.success && response.data.payment_url) {
-                    window.open(response.data.payment_url, '_blank');
                     toast.success('Подписка создана! Перенаправляем на оплату...');
                     setDialogOpen(false);
                     paymentForm.reset({
@@ -72,6 +71,7 @@ export function HeroSection() {
                         name: '',
                     });
                     setSelectedAmount(null);
+                    window.location.assign(response.data.payment_url);
                 } else {
                     toast.error('Ошибка при создании подписки');
                 }
