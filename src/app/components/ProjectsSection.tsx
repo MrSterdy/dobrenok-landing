@@ -62,8 +62,8 @@ export async function ProjectsSection() {
             <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 mt-10 mx-auto max-w-screen-xl w-full px-6" id="projects">
                 <div className="flex flex-col lg:justify-between gap-8 lg:sticky lg:top-0 py-8 lg:h-screen">
                     <div className="flex flex-col">
-                        <h2 className="uppercase font-benzin text-balance text-center lg:text-left text-4xl lg:text-6xl">Проекты фонда</h2>
-                        <p className="text-balance font-medium text-2xl text-center lg:text-left mt-6">Мы верим, что каждый из нас может сделать этот мир добрее, а дети — наш главный пример и источник вдохновения</p>
+                        <h2 className="uppercase font-benzin text-balance text-center lg:text-left text-2xl lg:text-6xl">Проекты фонда</h2>
+                        <p className="text-balance font-medium md:text-2xl text-center lg:text-left mt-6">Мы верим, что каждый из нас может сделать этот мир добрее, а дети — наш главный пример и источник вдохновения</p>
                     </div>
                     <div className="hidden lg:flex lg:flex-col">
                         <h4 className="text-balance font-medium text-2xl">Собрано на помощь в реализации</h4>
@@ -85,11 +85,11 @@ export async function ProjectsSection() {
     }
 
     return (
-        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 mt-10 mx-auto max-w-screen-xl w-full px-6" id="projects">
+        <section className="flex flex-col lg:flex-row gap-8 lg:gap-16 mt-6 md:mt-10 mx-auto max-w-screen-xl w-full px-6" id="projects">
             <div className="flex flex-col lg:justify-between gap-8 lg:sticky lg:top-0 py-8 lg:h-screen">
                 <div className="flex flex-col">
-                    <h2 className="uppercase font-benzin text-balance text-center lg:text-left text-4xl lg:text-6xl">Проекты фонда</h2>
-                    <p className="text-balance font-medium text-2xl text-center lg:text-left mt-6">Мы верим, что каждый из нас может сделать этот мир добрее, а дети — наш главный пример и источник вдохновения</p>
+                    <h2 className="uppercase font-benzin text-balance text-center lg:text-left text-2xl lg:text-6xl">Проекты фонда</h2>
+                    <p className="text-balance font-medium md:text-2xl text-center lg:text-left mt-6">Мы верим, что каждый из нас может сделать этот мир добрее, а дети — наш главный пример и источник вдохновения</p>
                 </div>
                 <div className="hidden lg:flex lg:flex-col">
                     <h4 className="text-balance font-medium text-2xl">Собрано на помощь в реализации</h4>
@@ -105,32 +105,32 @@ export async function ProjectsSection() {
             </div>
             <ul className="grid gap-8 min-w-[40%]">
                 {projects.map((project) => (
-                    <li key={project.id} className="flex flex-col w-full items-center justify-between rounded-lg bg-secondary pt-6 lg:pt-10 pb-4 lg:pb-8 px-4 lg:px-6 sticky h-screen">
+                    <li key={project.id} className="flex flex-col w-full items-center justify-between rounded-lg bg-secondary pt-2 md:pt-6 lg:pt-10 pb-4 lg:pb-8 px-4 lg:px-6 sticky h-screen">
                         <div className="flex flex-col items-center w-full">
-                            <h3 className="font-benzin text-balance text-3xl text-center">{project.name}</h3>
+                            <h3 className="font-benzin text-balance md:text-3xl text-center">{project.name}</h3>
                             {project.cover_photo_url ? (
-                                <img src={project.cover_photo_url} alt={project.name} className="bg-white rounded-lg h-86 lg:h-64 w-full object-cover mt-8" />
+                                <img src={project.cover_photo_url} alt={project.name} className="bg-white rounded-lg h-86 lg:h-64 w-full object-cover mt-4 md:mt-8" />
                             ) : (
-                                <div className="bg-white rounded-lg h-86 lg:h-64 w-full mt-8">
+                                <div className="bg-white rounded-lg h-86 lg:h-64 w-full mt-4 md:mt-8">
                                 </div>
                             )}
                             {project.description && (
-                                <p className="text-muted-foreground text-balance text-center mt-6 text-xl md:text-2xl">
+                                <p className="text-muted-foreground text-balance text-center mt-6 text-sm md:text-2xl">
                                     {project.description}
                                 </p>
                             )}
                         </div>
                         <div className="flex flex-col w-full mt-8 lg:mb-8">
-                            <Progress indicatorClassName="bg-[#F9AE00] rounded-r-full" value={20} className="h-4 mt-8 lg:hidden" />
-                            <div className="flex justify-between gap-4 text-lg text-muted-foreground mt-4 lg:hidden">
+                            <Progress indicatorClassName="bg-[#F9AE00] rounded-r-full" value={20} className="h-2 md:h-4 mt-8 lg:hidden" />
+                            <div className="flex justify-between gap-4 text-muted-foreground mt-2 md:mt-4 lg:hidden">
                                 <span>0 руб.</span>
                                 <span>100.000 руб.</span>
                             </div>
                             <div className="w-full grid grid-cols-2 lg:grid-cols-1 lg:place-items-center gap-2 mt-4">
-                                <Button size="lg" variant="blue" className="cursor-pointer shadow-none text-lg md:text-xl lg:text-2xl font-normal h-12 md:h-14 lg:h-18 md:rounded-lg lg:hidden">
+                                <Button size="lg" variant="blue" className="cursor-pointer shadow-none md:text-xl lg:text-2xl font-normal md:h-14 lg:h-18 md:rounded-lg lg:hidden">
                                     Хочу помочь
                                 </Button>
-                                <Button size="lg" variant="green" className="cursor-pointer shadow-none text-lg md:text-xl lg:text-2xl font-normal h-12 md:h-14 lg:h-18 md:rounded-lg">
+                                <Button size="lg" variant="green" className="cursor-pointer shadow-none md:text-xl lg:text-2xl font-normal md:h-14 lg:h-18 md:rounded-lg">
                                     Узнать подробнее
                                 </Button>
                             </div>

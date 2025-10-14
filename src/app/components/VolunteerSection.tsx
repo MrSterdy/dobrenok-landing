@@ -62,12 +62,12 @@ export function VolunteerSection() {
 
     return (
         <section className="mx-auto max-w-screen-xl w-full px-4">
-            <div className="flex flex-col items-center bg-[#32A535] rounded-lg mt-18 pt-18 pb-14">
-                <h2 className="font-benzin text-center text-balance uppercase text-white text-3xl md:text-4xl">Стань волонтёром</h2>
-                <p className="text-center text-balance text-white text-xl md:text-2xl mt-8">Стать волонтёром фонда очень просто. Заполните анкету, и в течение нескольких дней с вами свяжутся, чтобы пригласить на собеседование.</p>
+            <div className="flex flex-col items-center bg-[#32A535] rounded-lg mt-12 md:mt-18 pt-14 md:pt-18 pb-10 md:pb-14">
+                <h2 className="font-benzin text-center text-balance uppercase text-white text-2xl md:text-4xl">Стань волонтёром</h2>
+                <p className="text-center text-balance text-white md:text-2xl mt-4 md:mt-8">Стать волонтёром фонда очень просто. Заполните анкету, и в течение нескольких дней с вами свяжутся, чтобы пригласить на собеседование.</p>
                 <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                     <DialogTrigger asChild>
-                        <Button size="lg" variant="yellow" className="cursor-pointer shadow-none text-xl md:text-2xl font-normal h-14 md:h-18 px-10 md:px-6 mt-6 rounded-xl md:rounded-lg">
+                        <Button size="lg" variant="yellow" className="cursor-pointer shadow-none text-base md:text-2xl font-normal h-10 md:h-18 px-10 md:px-6 mt-6 rounded-xl md:rounded-lg">
                             Заполнить анкету
                         </Button>
                     </DialogTrigger>

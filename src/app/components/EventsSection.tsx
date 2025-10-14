@@ -183,8 +183,8 @@ export async function EventsSection() {
 
     return (
         <section className="mt-18 mx-auto max-w-screen-xl w-full px-6" id="events">
-            <div className="pt-18 pb-14 flex flex-col items-center rounded-lg bg-gradient-to-t from-[#1EBCEE] to-[#2C85EB] px-9 lg:px-18">
-                <h2 className="font-benzin text-center text-balance uppercase text-white text-3xl lg:text-4xl">Мероприятия фонда</h2>
+            <div className="pt-12 md:pt-18 pb-10 md:pb-14 flex flex-col items-center rounded-lg bg-gradient-to-t from-[#1EBCEE] to-[#2C85EB] px-4 md:px-9 lg:px-18">
+                <h2 className="font-benzin text-center text-balance uppercase text-white text-xl md:text-3xl lg:text-4xl">Мероприятия фонда</h2>
                 <EventsCalendar
                     monthName={monthName}
                     days={days}

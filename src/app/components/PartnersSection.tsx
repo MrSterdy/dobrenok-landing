@@ -62,8 +62,8 @@ export async function PartnersSection() {
     }
 
     return (
-        <section className="flex flex-col mt-18 pb-14 mx-auto max-w-screen-xl w-full px-6">
-            <h2 className="font-benzin text-center text-balance uppercase text-4xl">Наши партнеры</h2>
+        <section className="flex flex-col mt-12 md:mt-18 pb-10 md:pb-14 mx-auto max-w-screen-xl w-full px-6">
+            <h2 className="font-benzin text-center text-balance uppercase text-xl md:text-4xl">Наши партнеры</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-16 flex-wrap">
                 {partners.map((partner) => (
                     <li key={partner.id} className="grid place-items-center">

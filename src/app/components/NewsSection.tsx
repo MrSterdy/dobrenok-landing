@@ -35,8 +35,8 @@ export async function NewsSection() {
     const news = await getLatestNews();
 
     return (
-        <section className="flex flex-col mt-18 pb-14 mx-auto max-w-screen-xl w-full px-6" id="news">
-            <h2 className="font-benzin text-center text-balance uppercase text-4xl">Новости фонда</h2>
+        <section className="flex flex-col mt-12 md:mt-18 pb-14 mx-auto max-w-screen-xl w-full px-6" id="news">
+            <h2 className="font-benzin text-center text-balance uppercase text-xl md:text-4xl">Новости фонда</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                 {news.slice(0, 3).map((post) => (
                     <Link

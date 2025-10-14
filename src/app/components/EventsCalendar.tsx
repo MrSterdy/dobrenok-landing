@@ -50,10 +50,10 @@ export function EventsCalendar({ monthName, days, initialSelectedDay, initialSel
     };
 
     return (
-        <div className="flex flex-col lg:w-full lg:flex-row gap-12 mt-16 items-stretch">
+        <div className="flex flex-col lg:w-full lg:flex-row gap-12 mt-12 md:mt-16 items-stretch">
             <div className="flex flex-col flex-shrink-0">
                 <div className="flex flex-col rounded-md bg-white p-6 self-center lg:self-start">
-                    <h4 className="font-medium text-xl text-center lg:text-left">{monthName}</h4>
+                    <h4 className="font-medium md:text-xl text-center lg:text-left">{monthName}</h4>
                     <div className="grid grid-cols-7 gap-2 mt-6">
                         {weekDays.map((day, index) => (
                             <div
@@ -104,7 +104,7 @@ export function EventsCalendar({ monthName, days, initialSelectedDay, initialSel
                         })}
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-8 mt-6">
+                <div className="grid grid-cols-2 gap-8 mt-4 md:mt-6">
                     <div className="flex items-center gap-3 justify-center lg:justify-start">
                         <div className="bg-[#32A535] size-6 lg:size-9 rounded-md border-[1px] border-white"></div>
                         <span className="text-white text-sm lg:text-base">- прошедшие</span>
@@ -135,7 +135,7 @@ export function EventsCalendar({ monthName, days, initialSelectedDay, initialSel
                     </>
                 ) : (
                     <div className="flex flex-col justify-center items-center h-full text-white">
-                        <p className="text-xl text-center">На {selectedDay} число мероприятий не запланировано</p>
+                        <p className="md:text-xl text-center">На {selectedDay} число мероприятий не запланировано</p>
                     </div>
                 )}
             </div>
