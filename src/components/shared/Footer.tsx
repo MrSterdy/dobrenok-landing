@@ -48,9 +48,13 @@ export default function Footer() {
                                     </Link>
                                 </nav>
                                 <nav className="flex flex-col gap-2">
-                                    <Link href="/documents" className="text-muted-foreground flex items-center gap-1">
+                                    <Link href="/dokumenty" className="text-muted-foreground flex items-center gap-1">
                                         <ChevronRight className="opacity-50" strokeWidth={1.2} />
                                         Документы
+                                    </Link>
+                                    <Link href="/team" className="text-muted-foreground flex items-center gap-1">
+                                        <ChevronRight className="opacity-50" strokeWidth={1.2} />
+                                        Команда
                                     </Link>
                                 </nav>
                             </div>

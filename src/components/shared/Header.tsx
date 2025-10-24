@@ -40,7 +40,10 @@ export default function Header() {
                                         <a href="https://dobrenok-fond.ru/my-v-smi">Мы в СМИ</a>
                                     </li>
                                     <li>
-                                        <a href="https://dobrenok-fond.ru/o-fonde/dokumenty">Документы</a>
+                                        <Link href="/dokumenty">Документы</Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/team">Команда</Link>
                                     </li>
                                 </ul>
                             </NavigationMenuContent>
@@ -144,6 +147,12 @@ export default function Header() {
                                 </Button>
                                 <Button size="lg" variant="ghost" asChild className="cursor-pointer shadow-none justify-start px-4">
                                     <Link href="/#contacts">Контакты</Link>
+                                </Button>
+                                <Button size="lg" variant="ghost" asChild className="cursor-pointer shadow-none justify-start px-4">
+                                    <Link href="/dokumenty">Документы</Link>
+                                </Button>
+                                <Button size="lg" variant="ghost" asChild className="cursor-pointer shadow-none justify-start px-4">
+                                    <Link href="/team">Команда</Link>
                                 </Button>
                             </nav>
                             <Button size="lg" variant="green" className="sm:hidden cursor-pointer shadow-none mx-4">

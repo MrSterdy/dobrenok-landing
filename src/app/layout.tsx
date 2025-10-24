@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ReactLenis from "lenis/react";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Toaster } from "@/components/ui/sonner";
@@ -18,13 +17,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className="antialiased">
-        <ReactLenis root>
-          <main className="min-h-screen flex flex-col">
-            <Header />
-            {children}
-            <Footer />
-          </main>
-        </ReactLenis>
+        <main className="min-h-screen flex flex-col">
+          <Header />
+          {children}
+          <Footer />
+        </main>
         <Toaster />
       </body>
     </html>
