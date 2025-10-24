@@ -198,7 +198,7 @@ export function ProjectsSection() {
                     )}
                 </div>
             </div>
-            <ul className="grid gap-8 min-w-[40%]">
+            <ul className="grid gap-8 min-w-[40%] max-w-128">
                 {projects.map((project, index) => (
                     <li
                         key={project.id}
