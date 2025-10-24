@@ -1,9 +1,12 @@
+'use client'
+
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "../ui/navigation-menu";
+import { GeneralDonationModal } from "@/app/components/GeneralDonationModal";
 
 export default function Header() {
     return (
@@ -115,9 +118,11 @@ export default function Header() {
                 <a href="https://dobrenok-fond.ru/kontakty">Контакты</a>
             </nav>
             <div className="flex items-center gap-2">
-                <Button size="lg" variant="green" className="hidden sm:block cursor-pointer shadow-none mx-4">
-                    Хочу помочь
-                </Button>
+                <GeneralDonationModal>
+                    <Button size="lg" variant="green" className="hidden sm:block cursor-pointer shadow-none mx-4">
+                        Хочу помочь
+                    </Button>
+                </GeneralDonationModal>
                 <Sheet>
                     <SheetTrigger asChild>
                         <Button size="icon" className="cursor-pointer shadow-none lg:hidden" variant="ghost">
@@ -155,9 +160,11 @@ export default function Header() {
                                     <Link href="/team">Команда</Link>
                                 </Button>
                             </nav>
-                            <Button size="lg" variant="green" className="sm:hidden cursor-pointer shadow-none mx-4">
-                                Хочу помочь
-                            </Button>
+                            <GeneralDonationModal>
+                                <Button size="lg" variant="green" className="sm:hidden cursor-pointer shadow-none mx-4">
+                                    Хочу помочь
+                                </Button>
+                            </GeneralDonationModal>
                         </div>
                     </SheetContent>
                 </Sheet>
